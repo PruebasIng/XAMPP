@@ -1,0 +1,418 @@
+
+<model xmlns="http://ns.adobe.com/Fiber/1.0">
+  <annotation name="ActionScriptGeneration">
+    <item name="FullyQualifyReferences">true</item>
+  </annotation>
+  <service name="McdepartamentoService">
+    <annotation name="ActionScriptGeneration">
+      <item name="Source">McdepartamentoService</item>
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services.mcdepartamentoservice</item>
+      <item name="Endpoint">gateway.php</item>
+      <item name="Destination">McdepartamentoService</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">PHP</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="PHP_RELATIVE_LOCATION">FXP_CLOUD-debug/services/McdepartamentoService.php</item>
+      <item name="PHP_SERVER_ROOT">C:/xampp/htdocs/FXP_CLOUD</item>
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="PHP_SERVICES_FOLDER">C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services</item>
+      <item name="PHP_LOCATION">C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services/McdepartamentoService.php</item>
+      <item name="LINKED_FILE">McdepartamentoService.php</item>
+      <item name="PHP_SERVER_ROOT_URL">http://localhost:8080/FXP_CLOUD/</item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/FXP_CLOUD/FXP_CLOUD-debug/gateway.php</item>
+      <item name="PHP_CLASS_NAME">McdepartamentoService</item>
+    </annotation>
+    <function name="getAllMc_departamento" return-type="Mc_departamento[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMc_departamentoByID" return-type="Mc_departamento">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="createMc_departamento" return-type="string">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Mc_departamento"/>
+    </function>
+    <function name="updateMc_departamento" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Mc_departamento"/>
+    </function>
+    <function name="deleteMc_departamento" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="count" return-type="integer">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMc_departamento_paged" return-type="Mc_departamento[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque,opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="startIndex" type="integer"/>
+      <parameter name="numItems" type="integer"/>
+    </function>
+    <function name="getMc_departamentoByPais" return-type="Mc_departamento[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">Codigo_Departamento,Nombre_Departamento,Codigo_Pais</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="opaque"/>
+    </function>
+  </service>
+  <entity name="Mc_departamento" persistent="true">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Mc_departamento</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">McdepartamentoService</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="DataManagement">
+      <item name="create">createMc_departamento</item>
+      <item name="update">updateMc_departamento</item>
+      <item name="get">getMc_departamentoByID</item>
+      <item name="delete">deleteMc_departamento</item>
+      <item name="fillFunc">getAllMc_departamento,getMc_departamento_paged,getMc_departamentoByPais</item>
+      <item name="managingService">McdepartamentoService</item>
+    </annotation>
+    <annotation name="getMc_departamentoByID">
+      <item name="propertySpecifier">Codigo_Departamento,Nombre_Departamento,Codigo_Pais</item>
+    </annotation>
+    <annotation name="getAllMc_departamento">
+      <item name="propertySpecifier">Codigo_Departamento,Nombre_Departamento,Codigo_Pais</item>
+    </annotation>
+    <annotation name="getMc_departamento_paged">
+      <item name="propertySpecifier">Codigo_Departamento,Nombre_Departamento,Codigo_Pais</item>
+      <item name="pagingEnabled">true</item>
+      <item name="positionalPagingParameters">true</item>
+      <item name="countOperation">count</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <annotation name="getMc_departamentoByPais">
+      <item name="propertySpecifier">Codigo_Departamento,Nombre_Departamento,Codigo_Pais</item>
+    </annotation>
+    <id name="Codigo_Departamento" type="string"/>
+    <property name="Nombre_Departamento" type="string"/>
+    <property name="Codigo_Pais" type="string"/>
+  </entity>
+  <service name="McmunicipioService">
+    <annotation name="ActionScriptGeneration">
+      <item name="Source">McmunicipioService</item>
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services.mcmunicipioservice</item>
+      <item name="Endpoint">gateway.php</item>
+      <item name="Destination">McmunicipioService</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">PHP</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="PHP_RELATIVE_LOCATION">FXP_CLOUD-debug/services/McmunicipioService.php</item>
+      <item name="PHP_SERVER_ROOT">C:/xampp/htdocs/FXP_CLOUD</item>
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="PHP_SERVICES_FOLDER">C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services</item>
+      <item name="PHP_LOCATION">C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services/McmunicipioService.php</item>
+      <item name="LINKED_FILE">McmunicipioService.php</item>
+      <item name="PHP_SERVER_ROOT_URL">http://localhost:8080/FXP_CLOUD/</item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/FXP_CLOUD/FXP_CLOUD-debug/gateway.php</item>
+      <item name="PHP_CLASS_NAME">McmunicipioService</item>
+    </annotation>
+    <function name="getAllMc_municipio" return-type="Mc_municipio[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMc_municipioByID" return-type="Mc_municipio">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="createMc_municipio" return-type="string">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Mc_municipio"/>
+    </function>
+    <function name="updateMc_municipio" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Mc_municipio"/>
+    </function>
+    <function name="deleteMc_municipio" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="count" return-type="integer">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMc_municipio_paged" return-type="Mc_municipio[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque,opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="startIndex" type="integer"/>
+      <parameter name="numItems" type="integer"/>
+    </function>
+    <function name="getMc_municipioByDpto" return-type="Mc_municipio[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">Codigo_Municipio,Nombre_Municipio,Codigo_Departamento</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="opaque"/>
+    </function>
+  </service>
+  <entity name="Mc_municipio" persistent="true">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Mc_municipio</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">McmunicipioService</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="DataManagement">
+      <item name="create">createMc_municipio</item>
+      <item name="update">updateMc_municipio</item>
+      <item name="get">getMc_municipioByID</item>
+      <item name="delete">deleteMc_municipio</item>
+      <item name="fillFunc">getAllMc_municipio,getMc_municipio_paged,getMc_municipioByDpto</item>
+      <item name="managingService">McmunicipioService</item>
+    </annotation>
+    <annotation name="getMc_municipioByID">
+      <item name="propertySpecifier">Codigo_Municipio,Nombre_Municipio,Codigo_Departamento</item>
+    </annotation>
+    <annotation name="getAllMc_municipio">
+      <item name="propertySpecifier">Codigo_Municipio,Nombre_Municipio,Codigo_Departamento</item>
+    </annotation>
+    <annotation name="getMc_municipio_paged">
+      <item name="propertySpecifier">Codigo_Municipio,Nombre_Municipio,Codigo_Departamento</item>
+      <item name="pagingEnabled">true</item>
+      <item name="positionalPagingParameters">true</item>
+      <item name="countOperation">count</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <annotation name="getMc_municipioByDpto">
+      <item name="propertySpecifier">Codigo_Municipio,Nombre_Municipio,Codigo_Departamento</item>
+    </annotation>
+    <id name="Codigo_Municipio" type="string"/>
+    <property name="Nombre_Municipio" type="string"/>
+    <property name="Codigo_Departamento" type="string"/>
+  </entity>
+  <service name="McpaisService">
+    <annotation name="ActionScriptGeneration">
+      <item name="Source">McpaisService</item>
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services.mcpaisservice</item>
+      <item name="Endpoint">gateway.php</item>
+      <item name="Destination">McpaisService</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">PHP</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="PHP_RELATIVE_LOCATION">FXP_CLOUD-debug/services/McpaisService.php</item>
+      <item name="PHP_SERVER_ROOT">C:/xampp/htdocs/FXP_CLOUD</item>
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="PHP_SERVICES_FOLDER">C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services</item>
+      <item name="PHP_LOCATION">C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services/McpaisService.php</item>
+      <item name="LINKED_FILE">McpaisService.php</item>
+      <item name="PHP_SERVER_ROOT_URL">http://localhost:8080/FXP_CLOUD/</item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/FXP_CLOUD/FXP_CLOUD-debug/gateway.php</item>
+      <item name="PHP_CLASS_NAME">McpaisService</item>
+    </annotation>
+    <function name="getAllMc_pais" return-type="Mc_pais[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMc_paisByID" return-type="Mc_pais">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="createMc_pais" return-type="string">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Mc_pais"/>
+    </function>
+    <function name="updateMc_pais" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Mc_pais"/>
+    </function>
+    <function name="deleteMc_pais" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="count" return-type="integer">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMc_pais_paged" return-type="Mc_pais[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque,opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="startIndex" type="integer"/>
+      <parameter name="numItems" type="integer"/>
+    </function>
+  </service>
+  <entity name="Mc_pais" persistent="true">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Mc_pais</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">McpaisService</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="DataManagement">
+      <item name="create">createMc_pais</item>
+      <item name="update">updateMc_pais</item>
+      <item name="get">getMc_paisByID</item>
+      <item name="delete">deleteMc_pais</item>
+      <item name="fillFunc">getAllMc_pais,getMc_pais_paged</item>
+      <item name="managingService">McpaisService</item>
+    </annotation>
+    <annotation name="getMc_paisByID">
+      <item name="propertySpecifier">Codigo_Pais,Nombre_Pais</item>
+    </annotation>
+    <annotation name="getAllMc_pais">
+      <item name="propertySpecifier">Codigo_Pais,Nombre_Pais</item>
+    </annotation>
+    <annotation name="getMc_pais_paged">
+      <item name="propertySpecifier">Codigo_Pais,Nombre_Pais</item>
+      <item name="pagingEnabled">true</item>
+      <item name="positionalPagingParameters">true</item>
+      <item name="countOperation">count</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <id name="Codigo_Pais" type="string"/>
+    <property name="Nombre_Pais" type="string"/>
+  </entity>
+</model>

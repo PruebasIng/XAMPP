@@ -1,0 +1,48 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+s|Panel{
+	color:#FFFFFF;
+	backgroundAlpha:0.4;
+	backgroundColor:#000000;
+	borderAlpha:0.1;
+	borderColor:#FFFFFF;
+	cornerRadius:5;
+}
+
+.Button{
+	chromeColor: #7b848f;
+	color: #FFFFFF;
+	cornerRadius: 4;
+	fontWeight: bold;
+	fontFamily: Arial;
+}
+
+s|TextInput{
+	contentBackgroundAlpha: 0.2;
+	color: #FFFFFF;
+	contentBackgroundColor: #000000;
+}
+
+
+s|ComboBox{
+	contentBackgroundColor:#000000;
+	
+}
+
+mx|AdvancedDataGrid{
+	headerColors: #7b848f, #001D31;
+	alternatingItemColors:#000000, #424242;
+	color:#FFFFFF;
+	fontWeight:bold;
+	borderAlpha:0.1;
+	borderColor:#FFFFFF;
+	dropShadowVisible:true;
+	
+}
+
+mx|AdvancedDataGridHeaderRenderer{
+	color:#000000;
+	
+}

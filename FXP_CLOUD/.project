@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>FXP_CLOUD</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.flexnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>bin-debug</name>
+			<type>2</type>
+			<location>C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug</location>
+		</link>
+		<link>
+			<name>services/McdepartamentoService.php</name>
+			<type>1</type>
+			<location>C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services/McdepartamentoService.php</location>
+		</link>
+		<link>
+			<name>services/McmunicipioService.php</name>
+			<type>1</type>
+			<location>C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services/McmunicipioService.php</location>
+		</link>
+		<link>
+			<name>services/McpaisService.php</name>
+			<type>1</type>
+			<location>C:/xampp/htdocs/FXP_CLOUD/FXP_CLOUD-debug/services/McpaisService.php</location>
+		</link>
+	</linkedResources>
+</projectDescription>
